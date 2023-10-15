@@ -13,7 +13,7 @@ func (t TimeServer) ToDay(layout string) string {
 		layout = "2006-01-02"
 	}
 
-	err := timetools.CorrectDate(t.CurrentTestDate)
+	err := timetools.CheckDateExists(t.CurrentTestDate)
 	if err == nil {
 		return t.CurrentTestDate
 	}

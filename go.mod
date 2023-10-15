@@ -4,7 +4,7 @@ go 1.20
 
 require github.com/cdvelop/timetools v0.0.2
 
-require github.com/cdvelop/model v0.0.53 // indirect
+require github.com/cdvelop/model v0.0.54 // indirect
 
 replace github.com/cdvelop/model => ../model
 
