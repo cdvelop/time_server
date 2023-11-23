@@ -20,8 +20,8 @@ var (
 		"fecha 3 Martes ok":     {"2019-03-04", "Lun", "4", "Mar", "19"},
 		"fecha 4 Martes ok":     {"2024-03-01", "Vie", "1", "Mar", "24"},
 		"fecha 5 Miercoles ok":  {"2025-01-01", "Mie", "1", "Ene", "25"},
-		"fecha 6 format error":  {"2025-1-01", "formato de fecha ingresado incorrecto ej: 2006-01-02", "", "", ""},
-		"fecha 7 no data error": {"", "formato de fecha ingresado incorrecto ej: 2006-01-02", "", "", ""},
+		"fecha 6 format error":  {"2025-1-01", "StringDateToShort formato de fecha ingresado incorrecto ej: 2006-01-02", "", "", ""},
+		"fecha 7 no data error": {"", "StringDateToShort formato de fecha ingresado incorrecto ej: 2006-01-02", "", "", ""},
 	}
 )
 
@@ -35,8 +35,8 @@ func Test_ShortDate(t *testing.T) {
 			timeHandler := timeserver.TimeServer{}
 
 			txtD, D, txtM, Y, err := timetools.StringDateToShort(data.input, timeHandler)
-			if err != nil {
-				txtD = err.Error()
+			if err != "" {
+				txtD = err
 			}
 
 			// and error handler
