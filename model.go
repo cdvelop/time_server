@@ -1,5 +1,5 @@
 package timeserver
 
-type TimeServer struct {
-	CurrentTestDate string // ej "2023-08-29"
+type timeServer struct {
+	current_date string // ej "2023-08-29"
 }

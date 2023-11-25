@@ -32,7 +32,7 @@ func Test_ShortDate(t *testing.T) {
 	for prueba, data := range dataDateShort {
 		t.Run((prueba), func(t *testing.T) {
 
-			timeHandler := timeserver.TimeServer{}
+			timeHandler := timeserver.Add()
 
 			txtD, D, txtM, Y, err := timetools.StringDateToShort(data.input, timeHandler)
 			if err != "" {
