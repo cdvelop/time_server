@@ -7,11 +7,15 @@ import (
 )
 
 // layout ej: 2006-01-02 15:04
-func (t timeServer) ToDay(layout string) string {
+func (t timeServer) DateToDay() string {
+	return t.date("2006-01-02")
+}
 
-	if layout == "" {
-		layout = "2006-01-02"
-	}
+func (t timeServer) DateToDayHour() string {
+	return t.date("2006-01-02 15:04:05")
+}
+
+func (t timeServer) date(layout string) string {
 
 	if t.current_date != "" {
 		var hour string
@@ -25,4 +29,5 @@ func (t timeServer) ToDay(layout string) string {
 	}
 
 	return time.Now().Format(layout)
+
 }
