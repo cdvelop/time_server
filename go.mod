@@ -7,7 +7,7 @@ require (
 	github.com/cdvelop/timetools v0.0.28
 )
 
-require github.com/cdvelop/model v0.0.86 // indirect
+require github.com/cdvelop/model v0.0.89 // indirect
 
 replace github.com/cdvelop/model => ../model
 
