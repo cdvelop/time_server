@@ -3,7 +3,7 @@ package timeserver
 func Add() *timeServer {
 
 	t := &timeServer{
-		current_date: "",
+		fake_date: "",
 	}
 
 	return t
